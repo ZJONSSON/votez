@@ -1,0 +1,19 @@
+{
+  "name": "votez",
+  "version": "0.0.2",
+  "description": "Fast asynchronous scraper that fetches individual votes from the Icelandic parliament 1992-2013..",
+  "author": "(c) Ziggy Jonsson (http://github.com/zjonsson/)",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/ZJONSSON/votez.git"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "main": "main.js",
+  "dependencies": {
+    "request" : "2.16.6",
+    "node-expat" : "2.0.0"
+  },
+  "license": "MIT"
+}
