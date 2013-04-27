@@ -10,16 +10,9 @@ The scraper runs on [node.js](http://www.nodejs.org). Download the package and i
 
 `npm install` 
 
-First run the members scraper:
+And run scraper with: 
 
-`node members.js`
-
-and then fetch the votes:
-
-`node votes.js`
-
-All results are saved in the `/data/` subfolder.
-
+`node main.js`
 
 ##Intro
 
@@ -33,42 +26,4 @@ The scraper is asynchronous and non-blocking.  It can therefore be scaled drasti
 
 The data is normalized and saved to csv files, but can be easily recombined in browser or on server as needed.
 
-There are two scrapers, one to fetch member's names, id's and chronological party involvement.   The other scraper fetches all voting results with reference to case names and case id's.
-
-The `members.js` scraper must be run before `votes.js`, as the normalization process of voting results relies on looking up `member_id` for any individual member of parliament from the `members.csv` file.
-
-### Members.csv
-* `name`
-* `member_id`  (the official reference number on Parliament web)
-* `kt` (Icelandic social security)
-
-### periods.csv
- * `member_id`
- * `session_id`
- * `from` (date entry started)
- * `to` (date entry ende)
- * `pos` (the rank within region)
- * `type` (disregard, always Þingm)
- * `region` 
- * `party`  (key field)
- * `sub` (substitute flag)
-
-### meeting.csv
-* `voting_id`
-* `parliament_id`
-* `session_id`
-* `case_id`
-* `case`
-* `subtopic`
-* `doc_id`
-* `timestamp`
-* `result`
-
-### votes.csv
-* `voting_id`
-* `member_id`
-* `vote`   (j = yes, n = no, g=pass, f=absent)
-
-
-
-
+(work still in progress, csv files to mirror XML as much as possible)
